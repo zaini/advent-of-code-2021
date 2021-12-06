@@ -47,7 +47,7 @@ def solution2(transitions, height, width):
                 for i in range(min(y1, y2), max(y1, y2) + 1):
                     board[i][x1] += 1
         else:
-            while x1 != x2 and y1 != y2 and x1 < width and y1 < height and x1 >= 0 and y1 >= 0:
+            while x1 != x2 and y1 != y2 and x1 <= width and y1 <= height and x1 >= 0 and y1 >= 0:
                 board[y1][x1] += 1
 
                 if dx < 0:
@@ -59,6 +59,7 @@ def solution2(transitions, height, width):
                     y1 -= 1
                 else:
                     y1 += 1
+
             board[y2][x2] += 1
 
     # count how many values >=2
